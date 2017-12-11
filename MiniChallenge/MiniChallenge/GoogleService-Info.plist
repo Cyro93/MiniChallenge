@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>617299604730-kro0skk9u8gq1actn4nn38dkunq24vj8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.617299604730-kro0skk9u8gq1actn4nn38dkunq24vj8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCHlElGYWC3Fma7F43ec-0Q8gV5jC9tf1c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>617299604730</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>mind.blowers.MiniChallenge</string>
+	<key>PROJECT_ID</key>
+	<string>minichallenge-16791</string>
+	<key>STORAGE_BUCKET</key>
+	<string>minichallenge-16791.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:617299604730:ios:f7f312742376ee75</string>
+	<key>DATABASE_URL</key>
+	<string>https://minichallenge-16791.firebaseio.com</string>
+</dict>
+</plist>
