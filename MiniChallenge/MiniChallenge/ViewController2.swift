@@ -29,7 +29,7 @@ class ViewController2: UIViewController {
     
     @IBAction func pressedDeleteBUTTON(_ sender: Any) {
         delete_account_auth()
-        //delete_table_account()
+        delete_table_account()
         performSegue(withIdentifier: "view1", sender: self) //Back view
         //dismiss(animated: true, completion: .normal)
     }
@@ -37,7 +37,9 @@ class ViewController2: UIViewController {
     
     
     func delete_table_account(){
-        
+        let ref = Database.database().reference()
+        let user = "k"  //Username da cancellare
+        ref.child("Utenti/\(user)").removeValue() //Delete table from database
     }
     
     func delete_account_auth () {
