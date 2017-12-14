@@ -11,7 +11,7 @@ import FirebaseAuth
 import Firebase
 
 class ViewController: UIViewController {
-
+    
     //Object initializate
     @IBOutlet weak var segmentLog: UISegmentedControl!
     @IBOutlet weak var textEmail: UITextField!
@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonLogin: UIButton!
     @IBOutlet weak var labelError: UILabel!
     @IBOutlet weak var nicknameText: UITextField!
+    @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var tryUpButton: UIButton!
+    
     //End object
     
     
@@ -39,7 +42,7 @@ class ViewController: UIViewController {
                 let nickname = nicknameText.text!  //Nickname without Option
                 if nickname != "" {  //If nickname is not empty
                     Auth.auth().createUser(withEmail: email!, password: password!, completion:{ (user,error) in
-                    
+                        
                         if user != nil
                         {
                             //Sign Up Succesful
@@ -52,10 +55,10 @@ class ViewController: UIViewController {
                             //Write user data in table utenti from database
                             
                             let ref = Database.database().reference() //Create reference with database
-                   /*         let ref_user     = ref.child("Utenti/\(nickname)/email").setValue(email)
-                            let ref_password = ref.child("Utenti/\(nickname)/password").setValue(password)
-                    */
-                            let ref_user     = ref.child("Utenti/\(user!.uid)/email").setValue(email)
+                            /*       let ref_user     = ref.child("Utenti/\(nickname)/email").setValue(email)
+                             let ref_password = ref.child("Utenti/\(nickname)/password").setValue(password)
+                             */
+                            let ref_user    = ref.child("Utenti/\(user!.uid)/email").setValue(email)
                             
                             let ref_psw     = ref.child("Utenti/\(user!.uid)/password").setValue(password)
                             //End write
@@ -90,20 +93,24 @@ class ViewController: UIViewController {
             self.labelError.textColor = UIColor.red
             self.labelError.text = "Textbox empty"
         }
-
+        
     } //Close button pressed
     //End button pressed
     
     
     @IBAction func segmentChange(_ sender: UISegmentedControl) {
-        if segmentLog.selectedSegmentIndex == 1
+        if segmentLog.selectedSegmentIndex == 1 //Registration
         {
             nicknameText.isHidden = false
+            tryUpButton.isHidden  = false
+            facebookButton.setTitle("Sign in with Facebook", for: .normal)
             buttonLogin.setTitle("SIGN UP", for: .normal)
         }
-        else
+        else //0 is Login
         {
             nicknameText.isHidden = true
+            tryUpButton.isHidden  = true
+            facebookButton.setTitle("Login with Facebook", for: .normal)
             buttonLogin.setTitle("LOGIN", for: .normal)
         }
     }
@@ -140,7 +147,6 @@ class ViewController: UIViewController {
     }
     
     
-    
     //Check if there are any empty text bots
     func textsBoxEmpty () -> Bool {
         if (textPassword.text == "") || (textEmail.text == "") {
@@ -148,14 +154,15 @@ class ViewController: UIViewController {
         }
         return false
     }
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
+
