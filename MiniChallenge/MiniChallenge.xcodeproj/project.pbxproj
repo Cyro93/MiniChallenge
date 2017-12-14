@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57C8ECA61FE03A1F001A45A0 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C8ECA51FE03A1F001A45A0 /* ViewController2.swift */; };
+		574A085C1FE2E05400A1C881 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574A085B1FE2E05400A1C881 /* ProfileView.swift */; };
 		B6BC8524840FDCE6917046CE /* Pods_MiniChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F97AE036865F4E26390D7D /* Pods_MiniChallenge.framework */; };
 		CF2849311FDECC12000D6DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2849301FDECC12000D6DA6 /* AppDelegate.swift */; };
 		CF2849331FDECC12000D6DA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2849321FDECC12000D6DA6 /* ViewController.swift */; };
@@ -21,7 +21,7 @@
 		06F97AE036865F4E26390D7D /* Pods_MiniChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5209221AE41BDEE4CEAE2B35 /* Pods-MiniChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge/Pods-MiniChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		54E802642330EEE6A3139E71 /* Pods-MiniChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge/Pods-MiniChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		57C8ECA51FE03A1F001A45A0 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		574A085B1FE2E05400A1C881 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CF28492D1FDECC12000D6DA6 /* MiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2849301FDECC12000D6DA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF2849321FDECC12000D6DA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -85,7 +85,7 @@
 				CF7812B01FDEDD9800CE1A47 /* GoogleService-Info.plist */,
 				CF2849301FDECC12000D6DA6 /* AppDelegate.swift */,
 				CF2849321FDECC12000D6DA6 /* ViewController.swift */,
-				57C8ECA51FE03A1F001A45A0 /* ViewController2.swift */,
+				574A085B1FE2E05400A1C881 /* ProfileView.swift */,
 				CF2849341FDECC12000D6DA6 /* Main.storyboard */,
 				CF2849371FDECC12000D6DA6 /* Assets.xcassets */,
 				CF2849391FDECC12000D6DA6 /* LaunchScreen.storyboard */,
@@ -230,9 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				574A085C1FE2E05400A1C881 /* ProfileView.swift in Sources */,
 				CF2849331FDECC12000D6DA6 /* ViewController.swift in Sources */,
 				CF2849311FDECC12000D6DA6 /* AppDelegate.swift in Sources */,
-				57C8ECA61FE03A1F001A45A0 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZPJN7L3CF4;
+				DEVELOPMENT_TEAM = WHDFUHCE44;
 				INFOPLIST_FILE = MiniChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mind.blowers.MiniChallenge;
@@ -387,7 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZPJN7L3CF4;
+				DEVELOPMENT_TEAM = WHDFUHCE44;
 				INFOPLIST_FILE = MiniChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mind.blowers.MiniChallenge;

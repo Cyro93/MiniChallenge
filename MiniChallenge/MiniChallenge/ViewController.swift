@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var nicknameText: UITextField!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var tryUpButton: UIButton!
-    
     //End object
     
     
@@ -98,6 +97,11 @@ class ViewController: UIViewController {
     //End button pressed
     
     
+    @IBAction func tryUpPressed(_ sender: Any) {
+        performSegue(withIdentifier: "segueToTabBar", sender: self)
+    }
+    
+    
     @IBAction func segmentChange(_ sender: UISegmentedControl) {
         if segmentLog.selectedSegmentIndex == 1 //Registration
         {
@@ -123,7 +127,7 @@ class ViewController: UIViewController {
             if (user != nil) && (error == nil)
             {
                 //Login Successful
-                self.performSegue(withIdentifier: "view2", sender: self) //Next view
+                self.performSegue(withIdentifier: "segueToTabBar", sender: self) //Next view
                 
             }
             else
