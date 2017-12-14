@@ -15,6 +15,7 @@
 		CF2849381FDECC12000D6DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2849371FDECC12000D6DA6 /* Assets.xcassets */; };
 		CF28493B1FDECC12000D6DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2849391FDECC12000D6DA6 /* LaunchScreen.storyboard */; };
 		CF7812B11FDEDD9800CE1A47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF7812B01FDEDD9800CE1A47 /* GoogleService-Info.plist */; };
+		CFAC59FC1FE31DCB00360A2D /* ProfileScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAC59FB1FE31DCB00360A2D /* ProfileScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CF28493A1FDECC12000D6DA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF28493C1FDECC12000D6DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF7812B01FDEDD9800CE1A47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CFAC59FB1FE31DCB00360A2D /* ProfileScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				CF2849321FDECC12000D6DA6 /* ViewController.swift */,
 				574A085B1FE2E05400A1C881 /* ProfileView.swift */,
 				CF2849341FDECC12000D6DA6 /* Main.storyboard */,
+				CFAC59FB1FE31DCB00360A2D /* ProfileScene.swift */,
 				CF2849371FDECC12000D6DA6 /* Assets.xcassets */,
 				CF2849391FDECC12000D6DA6 /* LaunchScreen.storyboard */,
 				CF28493C1FDECC12000D6DA6 /* Info.plist */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAC59FC1FE31DCB00360A2D /* ProfileScene.swift in Sources */,
 				574A085C1FE2E05400A1C881 /* ProfileView.swift in Sources */,
 				CF2849331FDECC12000D6DA6 /* ViewController.swift in Sources */,
 				CF2849311FDECC12000D6DA6 /* AppDelegate.swift in Sources */,
@@ -371,7 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WHDFUHCE44;
+				DEVELOPMENT_TEAM = ZPJN7L3CF4;
 				INFOPLIST_FILE = MiniChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mind.blowers.MiniChallenge;
@@ -387,7 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WHDFUHCE44;
+				DEVELOPMENT_TEAM = ZPJN7L3CF4;
 				INFOPLIST_FILE = MiniChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mind.blowers.MiniChallenge;
