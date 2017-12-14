@@ -36,13 +36,18 @@ class ViewController2: UIViewController {
     
     
     
-    func delete_table_account(){
+   func delete_table_account(){
         let ref = Database.database().reference()
-        let user = "k"  //Username da cancellare
-        ref.child("Utenti/\(user)").removeValue() //Delete table from database
-    }
+     let uidCurrentUser = Auth.auth().currentUser!.uid
+       // let user = "k"
     
+       //Username da cancellare
+        ref.child("Utenti/\(uidCurrentUser)").removeValue() 
+     //Delete table from database
+    }
+ 
     func delete_account_auth () {
+        
         Auth.auth().currentUser?.delete(completion: { (err) in
             
             print(err?.localizedDescription)
@@ -67,8 +72,11 @@ class ViewController2: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        let emailCurrentUser = Auth.auth().currentUser?.email!
-        labelUser.text = "Welcome \(emailCurrentUser!)"
+    //    let emailCurrentUser = Auth.auth().currentUser?.email!
+     //   labelUser.text = "Welcome \(emailCurrentUser)"
+        
+        let uidCurrentUser = Auth.auth().currentUser!.uid
+           labelUser.text = "Welcome \(uidCurrentUser)"
     }
 
     override func didReceiveMemoryWarning() {

@@ -52,9 +52,12 @@ class ViewController: UIViewController {
                             //Write user data in table utenti from database
                             
                             let ref = Database.database().reference() //Create reference with database
-                            let ref_user     = ref.child("Utenti/\(nickname)/email").setValue(email)
+                   /*         let ref_user     = ref.child("Utenti/\(nickname)/email").setValue(email)
                             let ref_password = ref.child("Utenti/\(nickname)/password").setValue(password)
-                           
+                    */
+                            let ref_user     = ref.child("Utenti/\(user!.uid)/email").setValue(email)
+                            
+                            let ref_psw     = ref.child("Utenti/\(user!.uid)/password").setValue(password)
                             //End write
                             
                             self.nicknameText.isHidden = true
