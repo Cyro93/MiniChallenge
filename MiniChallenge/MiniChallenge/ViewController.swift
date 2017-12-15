@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelError: UILabel!
     @IBOutlet weak var nicknameText: UITextField!
     @IBOutlet weak var facebookButton: UIButton!
-    @IBOutlet weak var tryUpButton: UIButton!
+    @IBOutlet weak var tryAppButton: UIButton!
     //End object
     
     
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
                             self.labelError.text = "User register succesful"
                             self.segmentLog.selectedSegmentIndex = 0
                             self.buttonLogin.setTitle("LOGIN", for: .normal)
+                            self.tryAppButton.isHidden = true
                             // **************************
                             
                             //Write user data in table utenti from database
@@ -97,7 +98,12 @@ class ViewController: UIViewController {
     //End button pressed
     
     
-    @IBAction func tryUpPressed(_ sender: Any) {
+    @IBAction func tryAppPressed(_ sender: Any) {
+        let email:String = "guest0"
+        //let passw:String = "000000"
+        
+        Auth.auth().createUser(withEmail: email, password: "", completion:{ (user,error) in })
+    
         performSegue(withIdentifier: "segueToTabBar", sender: self)
     }
     
@@ -106,19 +112,18 @@ class ViewController: UIViewController {
         if segmentLog.selectedSegmentIndex == 1 //Registration
         {
             nicknameText.isHidden = false
-            tryUpButton.isHidden  = false
+            tryAppButton.isHidden  = false
             facebookButton.setTitle("Sign in with Facebook", for: .normal)
             buttonLogin.setTitle("SIGN UP", for: .normal)
         }
         else //0 is Login
         {
             nicknameText.isHidden = true
-            tryUpButton.isHidden  = true
+            tryAppButton.isHidden  = true
             facebookButton.setTitle("Login with Facebook", for: .normal)
             buttonLogin.setTitle("LOGIN", for: .normal)
         }
     }
-    
     
     
     func login () {

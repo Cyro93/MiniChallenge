@@ -254,12 +254,12 @@
                                     <constraint firstAttribute="height" constant="30" id="fzZ-OP-yJU"/>
                                 </constraints>
                                 <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Try up !">
+                                <state key="normal" title="Try App !">
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYI-4F-brq"/>
-                                    <action selector="tryUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QmX-dK-4sL"/>
+                                    <action selector="tryAppPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFd-2B-5wG"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zUE-xx-bPs">
@@ -314,7 +314,7 @@
                         <outlet property="segmentLog" destination="zUE-xx-bPs" id="PoY-7N-voM"/>
                         <outlet property="textEmail" destination="0x9-zB-Uro" id="wDi-1v-7GT"/>
                         <outlet property="textPassword" destination="txP-6V-jRX" id="KIp-mc-141"/>
-                        <outlet property="tryUpButton" destination="P94-PD-blC" id="W1Z-Zp-OgR"/>
+                        <outlet property="tryAppButton" destination="P94-PD-blC" id="NI2-pC-3J4"/>
                         <segue destination="hdb-1A-ojU" kind="show" identifier="segueToTabBar" id="0jx-qD-nzB"/>
                     </connections>
                 </viewController>
@@ -459,7 +459,6 @@
         <image name="profile picture" width="160" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DSg-k6-8lk"/>
         <segue reference="WXz-Ip-QNA"/>
     </inferredMetricsTieBreakers>
 </document>

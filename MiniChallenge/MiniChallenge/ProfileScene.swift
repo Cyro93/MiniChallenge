@@ -15,12 +15,6 @@ class ProfileScene: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func imageProfile(_ sender: UIButton) {
         
         
-        
-        
-        
-        
-        
-        
         let controller = UIImagePickerController()
         controller.delegate = self
         controller.sourceType = .photoLibrary

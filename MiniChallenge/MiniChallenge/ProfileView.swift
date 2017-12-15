@@ -23,7 +23,7 @@ class ProfileView: UIViewController {
     
     
     @IBAction func signOutPressed(_ sender: Any) {
-       // sign_out()
+        sign_out()
         
         performSegue(withIdentifier: "segueToLogin", sender: self)
         
@@ -33,18 +33,21 @@ class ProfileView: UIViewController {
         delete_account_auth()
         delete_table_account()
         performSegue(withIdentifier: "segueToLogin", sender: self) //Back view
-        //dismiss(animated: true, completion: .normal)
     }
     
-    
+    func isGuestAccount () -> Bool {
+        let userCurr = Auth.auth().currentUser?.email!
+        if userCurr == "guest0" {
+            return true
+        }
+        return false
+    }
     
     func delete_table_account(){
         let ref = Database.database().reference()
-        let uidCurrentUser = Auth.auth().currentUser!.uid
-        // let user = "k"
-        
-        //Username da cancellare
-        ref.child("Utenti/\(uidCurrentUser)").removeValue()
+        let userCurr = Auth.auth().currentUser?.email!
+        let uidCurrentUser = Auth.auth().currentUser?.uid
+        ref.child("Utenti/\(uidCurrentUser ?? "nil")").removeValue()
         //Delete table from database
     }
     
@@ -71,7 +74,12 @@ class ProfileView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let userCurr = Auth.auth().currentUser?.email
+        if userCurr == "guest0" {
+            deleteButton.isHidden = true
+        }else{
+            deleteButton.isHidden = false
+        }
         // Do any additional setup after loading the view.
         
         //    let emailCurrentUser = Auth.auth().currentUser?.email!
